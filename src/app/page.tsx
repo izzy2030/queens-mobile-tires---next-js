@@ -1,10 +1,10 @@
 import { client } from '@/lib/apollo';
 import { GET_RECENT_POSTS } from '@/lib/queries';
-import TireWidget from '@/components/TireWidget';
 import ServiceAreaSchema from '@/components/ServiceAreaSchema';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Star, Shield, Clock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import Hero from '@/components/Hero';
 
 export const dynamic = 'force-dynamic';
 
@@ -24,50 +24,7 @@ export default async function Home() {
     <main className="flex min-h-screen flex-col">
       <ServiceAreaSchema />
 
-      {/* Hero Section */}
-      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-slate-900 pt-20">
-        {/* Background */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-slate-900/40 z-10" />
-          <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1580273916550-e323be2ed532?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-50" />
-        </div>
-
-        <div className="container relative z-20 mx-auto px-4">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="max-w-2xl text-white">
-              <div className="mb-6 inline-flex items-center rounded-full bg-orange-500/20 px-4 py-2 text-sm font-bold text-orange-400 backdrop-blur-sm border border-orange-500/30">
-                <Star className="mr-2 h-4 w-4 fill-current" />
-                #1 Rated Mobile Tire Service in Queens
-              </div>
-              <h1 className="mb-6 text-5xl font-extrabold leading-tight tracking-tight sm:text-7xl">
-                We Bring The <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
-                  Tire Shop To You
-                </span>
-              </h1>
-              <p className="mb-8 text-xl text-slate-300">
-                Skip the waiting room. We install new tires at your home or office.
-                Fast, professional, and competitively priced.
-              </p>
-
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center rounded-lg bg-white/10 px-4 py-2 backdrop-blur-sm">
-                  <Shield className="mr-2 h-5 w-5 text-orange-500" />
-                  <span className="font-medium">Full Warranty</span>
-                </div>
-                <div className="flex items-center rounded-lg bg-white/10 px-4 py-2 backdrop-blur-sm">
-                  <Clock className="mr-2 h-5 w-5 text-orange-500" />
-                  <span className="font-medium">Same Day Service</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <TireWidget />
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Recent Cities / Service Areas */}
       <section className="bg-slate-50 py-24">
