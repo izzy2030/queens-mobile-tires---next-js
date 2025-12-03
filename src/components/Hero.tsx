@@ -1,7 +1,9 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Star, CheckCircle2 } from "lucide-react";
-import TireWidget from "./TireWidget";
+import { Star } from "lucide-react";
+import TireConnectWidget from "./TireConnectWidget";
 
 export default function Hero() {
     return (
@@ -81,7 +83,7 @@ export default function Hero() {
                 </div>
 
                 {/* Dashboard/Widget Preview */}
-                <div className="relative mt-20 w-full max-w-4xl">
+                <div className="relative mt-20 w-full max-w-6xl">
                     <div className="relative w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-200/50">
                         {/* Simple Mockup Header */}
                         <div className="flex h-12 items-center border-b border-slate-100 bg-slate-50/50 px-4">
@@ -90,31 +92,12 @@ export default function Hero() {
                                 <div className="h-3 w-3 rounded-full bg-yellow-400/20" />
                                 <div className="h-3 w-3 rounded-full bg-green-400/20" />
                             </div>
-                            <div className="mx-auto text-xs font-medium text-slate-400">
-                                queensmobiletires.com
-                            </div>
                         </div>
 
                         {/* Content: Tire Widget */}
-                        <div className="bg-slate-50 p-6 md:p-10">
-                            <div className="mx-auto max-w-2xl">
-                                <TireWidget />
-                            </div>
-
-                            {/* Additional Trust Indicators below widget */}
-                            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
-                                <div className="flex items-center justify-center gap-2 rounded-lg bg-white p-3 shadow-sm">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500" />
-                                    <span className="text-sm font-medium text-slate-700">Full Warranty</span>
-                                </div>
-                                <div className="flex items-center justify-center gap-2 rounded-lg bg-white p-3 shadow-sm">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500" />
-                                    <span className="text-sm font-medium text-slate-700">Same Day Service</span>
-                                </div>
-                                <div className="flex items-center justify-center gap-2 rounded-lg bg-white p-3 shadow-sm">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500" />
-                                    <span className="text-sm font-medium text-slate-700">Best Price Guarantee</span>
-                                </div>
+                        <div className="bg-slate-50 p-4 md:p-6 min-h-[600px] md:min-h-[800px]">
+                            <div className="mx-auto max-w-4xl">
+                                <TireConnectWidget />
                             </div>
                         </div>
                     </div>
